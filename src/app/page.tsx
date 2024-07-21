@@ -1,24 +1,15 @@
-import { Tab, TabGroup, TabList } from '@headlessui/react';
+import Header from "@/components/Header";
+import Tabs from "@/components/Tabs";
+import { TabGroup } from '@headlessui/react';
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-<TabGroup>
-  <h1 className='font-bold text-lg'>
-  高考大数据
-  </h1>
-  <TabList className="flex space-x-4 p-4">
-        <Tab className="py-2 px-4 text-white bg-blue-500 hover:bg-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-            Tab 1
-        </Tab>
-        <Tab className="py-2 px-4 text-blue-500 bg-white hover:bg-gray-100 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-            Tab 2
-        </Tab>
-        <Tab className="py-2 px-4 text-blue-500 bg-white hover:bg-gray-100 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-            Tab 3
-        </Tab>
-    </TabList>
-    <div className="p-4">
+    <TabGroup>
+      <Header />
+      <Tabs />
+      <div className="p-4">
         <table className="min-w-full bg-white">
           <thead>
             <tr className="w-full bg-blue-500 text-white">
@@ -71,6 +62,6 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-</TabGroup>
+    </TabGroup>
   );
 }
